@@ -11,8 +11,11 @@ root.title("www.nike.com")
 label1 = Label(root,text= "Sign up with Nike for exclusive discounts and more... ",foreground="white",bg= "black",padx= 150,pady=25, font= ("Ariel",10))
 label1.pack(side=BOTTOM)
 
-Blabel = Label(root, text= "Nike - Just Do It", fg= "orange",background="black",pady=25,padx=150,font=("Lato",24))
-Blabel.pack(side=TOP)
+Tlabel = Label(root, text= "Nike ", fg= "orange",background="black",pady=15,padx=150,font=("Lato",24))
+Tlabel.pack(side=TOP)
+
+t2label = Label(root, text= "Just Do It ", fg= "orange",background="black",pady=5,padx=150,font=("Lato",16))
+t2label.pack(side=TOP)
 
 label2 = Label(root,text= "Enter a vaild email account: ")
 label2.pack()
