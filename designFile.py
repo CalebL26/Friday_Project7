@@ -14,30 +14,28 @@ def validate_email(email):
         return False
 
 def validate_password(password1, password2):
-    # Check if the passwords match
     if password1 == password2:
         return True
     else:
         return False
 
 def store_user_info(email, password):
-    # Connect to the database
     conn = sqlite3.connect("users.db")
     c = conn.cursor()
     
-    # Create table if it doesn't exist
+    
     c.execute('''CREATE TABLE IF NOT EXISTS users
                  (email text, password text)''')
     
-    # Insert user's information into the database
+    
     c.execute("INSERT INTO users VALUES (?, ?)", (email, password))
     
-    # Commit changes and close connection
+  
     conn.commit()
     conn.close()
 
 def submit():
-    # Get user input from textboxes
+    
     email = textbox.get()
     password1 = textbox1.get()
     password2 = textbox2.get()
@@ -54,7 +52,7 @@ root = Tk()
 root.geometry("450x450")
 root.title("www.Nike.com")
 
-label1 = Label(root,text= "Sign up with Nike for exclusive discounts and more... ",foreground="white",bg= "black",padx= 100,pady=10, font= ("Ariel",10))
+label1 = Label(root,text= "Sign up with Nike for exclusive discounts and more... ",foreground="white",bg= "black",padx= 150,pady=20, font= ("Ariel",10))
 label1.pack(side=BOTTOM)
 
 Tlabel = Label(root, text= "Nike ", fg= "orange",background="black",pady=10,padx=250,font=("Lato",34))
